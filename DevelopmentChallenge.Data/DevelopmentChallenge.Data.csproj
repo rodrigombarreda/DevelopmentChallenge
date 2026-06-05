@@ -45,7 +45,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\FormaGeometrica.cs" />
+    <Compile Include="Enums\Idioma.cs" />
+    <Compile Include="Interfaces\IFormaGeometrica.cs" />
+    <Compile Include="Interfaces\IIdiomaTraductor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ReporteGeometrico.cs" />
+    <Compile Include="Services\TraductorFactory.cs" />
+    <Compile Include="Shapes\Circulo.cs" />
+    <Compile Include="Shapes\Cuadrado.cs" />
+    <Compile Include="Shapes\Trapecio.cs" />
+    <Compile Include="Shapes\TrianguloEquilatero.cs" />
+    <Compile Include="Translations\CastellanoTraductor.cs" />
+    <Compile Include="Translations\InglesTraductor.cs" />
+    <Compile Include="Translations\ItalianoTraductor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
