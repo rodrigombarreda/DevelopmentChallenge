@@ -67,3 +67,6 @@ _ReSharper*/
 
 #Test files
 *.testsettings
+
+# NuGet packages
+packages/
