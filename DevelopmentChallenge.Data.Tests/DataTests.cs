@@ -62,9 +62,8 @@ namespace DevelopmentChallenge.Data.Tests
         // ── Tipos mixtos ────────────────────────────────────────────────────
 
         [TestCase]
-        public void TestMixFormas_Ingles()
+        public void TestResumenMasTiposEnIngles()
         {
-            // Circulo recibe radio: 1.5 equivale al diámetro=3 del test original
             var formas = new List<IFormaGeometrica>
             {
                 new Cuadrado(5),
@@ -137,7 +136,6 @@ namespace DevelopmentChallenge.Data.Tests
         [TestCase]
         public void TestResumenUnTrapecioEnCastellano()
         {
-            // Area = (6+4)/2 * 3 = 15 | Perimetro = 6+4+5+5 = 20
             var formas = new List<IFormaGeometrica> { new Trapecio(6m, 4m, 3m, 5m, 5m) };
             var reporte = ReporteGeometrico.Para(Idioma.Castellano);
 
@@ -149,7 +147,6 @@ namespace DevelopmentChallenge.Data.Tests
         [TestCase]
         public void TestResumenDosTrapeciosEnIngles()
         {
-            // Area total = 30 | Perimetro total = 40
             var formas = new List<IFormaGeometrica>
             {
                 new Trapecio(6m, 4m, 3m, 5m, 5m),

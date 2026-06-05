@@ -3,9 +3,10 @@ using System;
 namespace DevelopmentChallenge.Data.Classes
 {
     /// <summary>
-    /// Fábrica que resuelve el <see cref="IIdiomaTraductor"/> concreto para un <see cref="Idioma"/>.
-    /// Agregar soporte a un nuevo idioma requiere únicamente crear una nueva implementación de
-    /// <see cref="IIdiomaTraductor"/> y registrarla aquí.
+    /// se recibe un idioma y se devuelve el traductor correspondiente. Agregar un nuevo idioma implica:
+    /// 1) Implementar un nuevo <see cref="IIdiomaTraductor"/> para el idioma.
+    /// 2) Agregar un nuevo valor a <see cref="Idioma"/>.
+    /// 3) Agregar un nuevo caso al switch de <see cref="Crear"/>.
     /// </summary>
     public static class TraductorFactory
     {
@@ -14,8 +15,8 @@ namespace DevelopmentChallenge.Data.Classes
             switch (idioma)
             {
                 case Idioma.Castellano: return new CastellanoTraductor();
-                case Idioma.Ingles:     return new InglesTraductor();
-                case Idioma.Italiano:   return new ItalianoTraductor();
+                case Idioma.Ingles: return new InglesTraductor();
+                case Idioma.Italiano: return new ItalianoTraductor();
                 default: throw new ArgumentOutOfRangeException(nameof(idioma), $"Idioma no soportado: {idioma}");
             }
         }

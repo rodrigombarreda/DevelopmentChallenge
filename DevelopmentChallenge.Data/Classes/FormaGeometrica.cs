@@ -4,7 +4,7 @@ namespace DevelopmentChallenge.Data.Classes
 {
     /// <summary>
     /// Clase base abstracta para todas las formas geométricas.
-    /// Implementa <see cref="IFormaGeometrica"/> y provee validación común a las subclases.
+    /// Implementa <see cref="IFormaGeometrica"/> 
     /// </summary>
     public abstract class FormaGeometrica : IFormaGeometrica
     {
@@ -14,7 +14,7 @@ namespace DevelopmentChallenge.Data.Classes
         public abstract string TraducirNombre(Idioma idioma, int cantidad);
 
         /// <summary>
-        /// Valida que una medida sea positiva. Lanza <see cref="ArgumentOutOfRangeException"/> si no lo es.
+        /// Valida que una medida sea positiva.
         /// </summary>
         protected static void ValidarMedida(decimal medida, string parametro)
         {
